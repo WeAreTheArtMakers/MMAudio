@@ -127,8 +127,8 @@ def text_to_audio(prompt: str, negative_prompt: str, seed: int, num_steps: int, 
 video_to_audio_tab = gr.Interface(
     fn=video_to_audio,
     description="""
-    Project page: <a href="https://hkchengrex.com/MMAudio/">https://hkchengrex.com/MMAudio/</a><br>
-    Code: <a href="https://github.com/hkchengrex/MMAudio">https://github.com/hkchengrex/MMAudio</a><br>
+    WATAM
+    We Are The AUDIO Makers
 
     NOTE: It takes longer to process high-resolution videos (>384 px on the shorter side). 
     Doing so does not improve results.
@@ -144,109 +144,9 @@ video_to_audio_tab = gr.Interface(
     ],
     outputs='playable_video',
     cache_examples=False,
-    title='MMAudio — Video-to-Audio Synthesis',
-    examples=[
-        [
-            'https://huggingface.co/hkchengrex/MMAudio/resolve/main/examples/sora_beach.mp4',
-            'waves, seagulls',
-            '',
-            0,
-            25,
-            4.5,
-            10,
-        ],
-        [
-            'https://huggingface.co/hkchengrex/MMAudio/resolve/main/examples/sora_serpent.mp4',
-            '',
-            'music',
-            0,
-            25,
-            4.5,
-            10,
-        ],
-        [
-            'https://huggingface.co/hkchengrex/MMAudio/resolve/main/examples/sora_seahorse.mp4',
-            'bubbles',
-            '',
-            0,
-            25,
-            4.5,
-            10,
-        ],
-        [
-            'https://huggingface.co/hkchengrex/MMAudio/resolve/main/examples/sora_india.mp4',
-            'Indian holy music',
-            '',
-            0,
-            25,
-            4.5,
-            10,
-        ],
-        [
-            'https://huggingface.co/hkchengrex/MMAudio/resolve/main/examples/sora_galloping.mp4',
-            'galloping',
-            '',
-            0,
-            25,
-            4.5,
-            10,
-        ],
-        [
-            'https://huggingface.co/hkchengrex/MMAudio/resolve/main/examples/sora_kraken.mp4',
-            'waves, storm',
-            '',
-            0,
-            25,
-            4.5,
-            10,
-        ],
-        [
-            'https://huggingface.co/hkchengrex/MMAudio/resolve/main/examples/mochi_storm.mp4',
-            'storm',
-            '',
-            0,
-            25,
-            4.5,
-            10,
-        ],
-        [
-            'https://huggingface.co/hkchengrex/MMAudio/resolve/main/examples/hunyuan_spring.mp4',
-            '',
-            '',
-            0,
-            25,
-            4.5,
-            10,
-        ],
-        [
-            'https://huggingface.co/hkchengrex/MMAudio/resolve/main/examples/hunyuan_typing.mp4',
-            'typing',
-            '',
-            0,
-            25,
-            4.5,
-            10,
-        ],
-        [
-            'https://huggingface.co/hkchengrex/MMAudio/resolve/main/examples/hunyuan_wake_up.mp4',
-            '',
-            '',
-            0,
-            25,
-            4.5,
-            10,
-        ],
-        [
-            'https://huggingface.co/hkchengrex/MMAudio/resolve/main/examples/sora_nyc.mp4',
-            '',
-            '',
-            0,
-            25,
-            4.5,
-            10,
-        ],
-    ])
-
+    title='modAUDIO — Video-to-Audio Synthesis',
+    )
+    
 text_to_audio_tab = gr.Interface(
     fn=text_to_audio,
     inputs=[
@@ -259,7 +159,7 @@ text_to_audio_tab = gr.Interface(
     ],
     outputs='audio',
     cache_examples=False,
-    title='MMAudio — Text-to-Audio Synthesis',
+    title='modAUDIO — Text-to-Audio Synthesis',
 )
 
 if __name__ == "__main__":
