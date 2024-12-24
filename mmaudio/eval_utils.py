@@ -89,7 +89,12 @@ def generate(
     clip_batch_size_multiplier: int = 40,
     sync_batch_size_multiplier: int = 40,
 ) -> torch.Tensor:
-    device = feature_utils.device
+    # MPS fallback ayarları
+    import os
+    os.environ["PYTORCH_ENABLE_MPS_FALLBACK"] = "1"
+
+    # Eğer MPS cihazı varsa, yoksa CPU'ya fallback yap
+    device = torch.device("mps") if torch.has_mps else torch.device("cpu")
     dtype = feature_utils.dtype
 
     bs = len(text)
